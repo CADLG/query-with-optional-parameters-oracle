@@ -44,7 +44,7 @@ So, as you might be thinking at this point, if we want to have a query for each 
 
 In the hr package I present two of the possible ways to handle these situations: One of them uses the dbms_sql package, which helps us run dynamic statements that can have a variable number of bind variables, and the other one uses a “trick” to be able to have a fixed number of binds, and thus, allows us to use native dynamic SQL. Both of them are coded as pipelined table functions, to facilitate their use from SQL statements.
 
-The query on which these functions are based is this one, in which a value for the :sal variable is from expected to always be provided, but the :depid and :empid are optional. It queries the employees table, which you can find in the Oracle-supplied HR schema:
+The query on which these functions are based is this one, in which a value for the :sal variable is expected to always be provided, but the :depid and :empid are optional. It queries the employees table, which you can find in the Oracle-supplied HR schema:
 
     SELECT *
     FROM employees
