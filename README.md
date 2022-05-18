@@ -24,8 +24,6 @@ This produces the desired result: If I provide a value for the :deptid variable,
 
 The problem with this approach is that if I have an index available on the department_id which could actually make the query retrieve the rows faster, the database will not use it, because it needs to create an execution plan that is generic and usable in both situations (when I supply a value for :deptid and when I don’t).
 
-Here is how the execution plan looks like on an
-
 Another approach that some people follow to write a generic query looks like this:
 
     SELECT employee_id, last_name, salary, department_id
