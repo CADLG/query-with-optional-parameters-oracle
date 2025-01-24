@@ -35,7 +35,7 @@ This option could be a little better because the query optimizer in some cases i
 
 Unfortunately, as soon as you add more optional parameters, the possibility of the optimizer creating an efficient execution plan practically disappears.
 
-## The Solution
+## The Proposed Solution
 So, what is the best way to handle these situations?
 
 To help the optimizer create a plan that is optimal for each situation, we would need to write a query that is specific for each situation, and tell the database which one to execute depending on the presence of the parameters, but this quickly gets complicated when there are several optional parameters, because we would need to create different queries for all the different combinations of parameters present.
